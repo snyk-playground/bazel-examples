@@ -2,7 +2,7 @@ Set-StrictMode -Version latest
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 # In case Appveyor decides to update the Visual Studio installation this will help to figure out the new version
-# Get-ChildItem env:
+Get-ChildItem env:
 bazel version
 if($IsWindows) {
     Write-Host "Skipping 'bazel run //:buildifier' on Windows"
